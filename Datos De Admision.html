@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Inscripción - Feria Informática</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #020617, #0f172a);
+    color: white;
+}
+
+
+.header {
+    text-align: center;
+    padding: 30px;
+    background: #020617;
+    box-shadow: 0 0 20px #00f0ff50;
+}
+
+.header h1 {
+    margin: 0;
+    color: #00f0ff;
+    text-shadow: 0 0 10px #00f0ff;
+}
+
+.header p {
+    color: #cbd5f5;
+}
+
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+form {
+    background: #1e293b;
+    padding: 30px;
+    border-radius: 20px;
+    width: 350px;
+    box-shadow: 0 0 25px #00f0ff40;
+    animation: fadeIn 1s ease;
+}
+
+
+label {
+    display: block;
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    background: #020617;
+    color: white;
+}
+
+
+button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background: #00f0ff;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #00c8d6;
+    transform: scale(1.05);
+}
+
+
+input:focus, select:focus {
+    box-shadow: 0 0 10px #00f0ff;
+}
+
+/* ANIMACIÓN */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+body::before {
+    content: "";
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        to bottom,
+        transparent,
+        transparent 2px,
+        #00f0ff20 3px
+    );
+    animation: moveLines 3s linear infinite;
+    pointer-events: none;
+}
+
+@keyframes moveLines {
+    from { transform: translateY(0); }
+    to { transform: translateY(100px); }
+}
+</style>
+
+</head>
+
+<body>
+
+<div class="header">
+    <h1>Feria Informática - Politécnico San Pablo Apostor</h1>
+    <p>Formulario de inscripción para estudiantes</p>
+</div>
+
+<div class="form-container">
+    <form>
+
+        <label>Nombre completo</label>
+        <input type="text" placeholder="Ingresa tu nombre" required>
+
+        <label>Correo electrónico</label>
+        <input type="email" placeholder="ejemplo@gmail.com" required>
+
+        <label>Teléfono</label>
+        <input type="tel" placeholder="809-000-0000" required>
+
+        <label>Curso / Grado</label>
+        <select required>
+            <option value="">Selecciona</option>
+            <option>1ro</option>
+            <option>2do</option>
+            <option>3ro</option>
+            <option>4to</option>
+            <option>5to</option>
+            <option>6to</option>
+        </select>
+
+        <label>Área de interés</label>
+        <select required>
+            <option value="">Selecciona</option>
+            <option>Bases De Datos</option>
+            <option>ADSI</option>
+            <option>Pagina Web</option>
+      
+        </select>
+
+        <label>Calle</label>
+        <input type="text" placeholder="Ej: Calle 5, Cristo Rey" required>
+
+        <button type="submit">Inscribirme</button>
+
+    </form>
+</div>
+
+</body>
+</html>
